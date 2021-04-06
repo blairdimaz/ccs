@@ -5,9 +5,10 @@ from .models import ccsFormData
 
 @admin.register(ccsFormData)
 class ccsAdmin(admin.ModelAdmin):
-    list_display = ['name', 'surname']
-    list_filter = ['name']
-    search_fields = ['name']
+    list_display = ['clientNumber', 'firstName', 'lastName', 'firstNameNOTsame',
+                    'lastNameNOTsame', 'nameOtherKnown','namePrefer','dob']
+    list_filter = ['clientNumber']
+    search_fields = ['clientNumber']
 
 
 

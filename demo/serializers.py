@@ -1,23 +1,17 @@
 from rest_framework import serializers
 # from .models import Book, BookNumber, Character,Author
 from .models import ccsFormData
+# from .models import Child
 
-
-
-# class BookNumberSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = BookNumber
-#         fields = ['id','isbn_10', 'isbn_13']
+# class childSerializer(serializers.ModelSerializer):
+#     # number = BookNumberSerializer(many=False)
+#     # characters = CharacterSerializer(many=True)
+#     # authors = AuthorSerializer(many=True)
 #
-# class CharacterSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Character
-#         fields = ['id','name']
 #
-# class AuthorSerializer(serializers.ModelSerializer):
 #     class Meta:
-#         model = Author
-#         fields = ['id','name', 'surname']
+#         model = Child
+#         fields = ['childName']
 
 class ccsSerializer(serializers.ModelSerializer):
     # number = BookNumberSerializer(many=False)
@@ -27,5 +21,77 @@ class ccsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ccsFormData
-        fields = ['id','name', 'surname','email',
-                  'phone']
+        fields = ['id',
+                  'clientNumber',
+                  'firstName','lastName',
+                  'firstNameNOTsame', 'lastNameNOTsame',
+                  'nameOtherKnown' ,
+                  'dob',
+                  'gender',
+                  'irdNumber',
+                  'flatHouseNum',
+                  'streetName',
+                  'suburb',
+                  'townCity',
+                  'mailingAddr',
+                  'homePhone',
+                  'mobPhone',
+                  'otherPhone',
+                  'getEmails',
+                  'ethnicity',
+                  'usuallyNZ',
+                  'residenceStatus',
+                  'dateGranted',
+                  'dateArrived',
+                  'countryOfBirth',
+                  'ccAssistanceReason',
+                  'isWorking',
+                  'employerName',
+                  'employerAddr',
+                  'employerPhone',
+                  'employerFaxEmail',
+                  'hoursPerWeek',
+                  'hoursTravel',
+                  'isWorkRelatedCourse',
+                  'trainingOrgName',
+                  'trainingOrgAddr',
+                  'trainingOrgPhone',
+                  'trainingOrgFaxEmail',
+                  'employerFaxEmail',
+                  'nameOfCourse',
+                  'isNZQA',
+                  'courseStartDate',
+                  'courseEndDate',
+                  'courseHoursPerWeek',
+                  'otherStudyHoursPerWeek',
+                  'hoursTravelCCtoCourse',
+                  'isArrangedActivities',
+                  'activityType',
+                  'hoursActivity',
+                  'hoursTravelCCtoActivity',
+                  'applyForMedicalReasons',
+                  'medicalDurationExpected',
+                  'hoursPerWeekNeedCC',
+                  'incomeWagesSalary',
+                  'incomePPL',
+                  'terminationPay',
+                  'redundancyPay',
+                  'acc',
+                  'incomeInsurance',
+                  'incomeBusiness',
+                  'incomeSelfEmpContract',
+                  'incomeInterest',
+                  'incomeDividends',
+                  'incomeRental',
+                  'incomeFlatmates',
+                  'incomeChildSup',
+                  'incomeOtherForChild',
+                  'incomeMaintenance',
+                  'incomeFormerPartner',
+                  'incomeStudentAllowance',
+                  'incomeOverseasPension',
+                  'incomeSuper',
+                  'incomeEstate',
+                  'incomeTrusts',
+                  'incomeOther'
+                  ]
