@@ -1,6 +1,48 @@
 from django.db import models
 
 # Create your models here.
+class ece(models.Model):
+    ECE_Id = models.CharField(max_length=9, blank=True)
+    Org_Name = models.CharField(max_length=9, blank=True)
+    Email = models.CharField(max_length=9, blank=True)
+    Org_Type = models.CharField(max_length=9, blank=True)
+    Twenty_Hrs_ECE = models.CharField(max_length=9, blank=True)
+    Charges_HoldingAbsenceFee = models.CharField(max_length=9, blank=True)
+    Education_Region = models.CharField(max_length=9, blank=True)
+    Contact1_Name = models.CharField(max_length=9, blank=True)
+
+
+class parent(models.Model):
+    username = models.CharField(max_length=9, blank=True)
+    children = models.CharField(max_length=9, blank=True)
+    applications = models.CharField(max_length=9, blank=True)
+    getEmails = models.CharField(max_length=40, blank=True)
+    partner = models.CharField(max_length=40, blank=True)
+
+    clientNumber = models.CharField(max_length=9, blank=True)
+    title = models.CharField(max_length=40, blank=True)
+    firstName = models.CharField(max_length=40, blank=True)
+    lastName = models.CharField(max_length=40, blank=True)
+    firstNameNOTsame = models.CharField(max_length=40, blank=True)
+    lastNameNOTsame = models.CharField(max_length=40, blank=True)
+    nameOtherKnown = models.CharField(max_length=40, blank=True)
+    namePrefer = models.CharField(max_length=40, blank=True)
+    dob = models.DateField(null=True)
+    gender = models.CharField(max_length=40, blank=True)
+    irdNumber = models.CharField(max_length=40, blank=True)
+    ethnicity = models.CharField(max_length=40, blank=True)
+
+
+
+
+class children(models.Model):
+    child_FullName = models.CharField(max_length=40, blank=True)
+    child_DOB = models.DateField(null=True)
+    child_Parent = models.CharField(max_length=40, blank=True)
+    Child_ECE_Provider= models.CharField(max_length=40, blank=True)
+    Child_ECE_WeekTotal= models.CharField(max_length=40, blank=True)
+    Child_ECE_StartDate= models.DateField(null=True)
+
 
 class ccsFormData(models.Model):
     clientNumber = models.CharField(max_length=9, blank=True)

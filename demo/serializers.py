@@ -1,17 +1,32 @@
 from rest_framework import serializers
 # from .models import Book, BookNumber, Character,Author
-from .models import ccsFormData
-# from .models import Child
+from .models import ccsFormData, children, parent, ece
+# from .models import children
 
-# class childSerializer(serializers.ModelSerializer):
-#     # number = BookNumberSerializer(many=False)
-#     # characters = CharacterSerializer(many=True)
-#     # authors = AuthorSerializer(many=True)
-#
-#
-#     class Meta:
-#         model = Child
-#         fields = ['childName']
+
+class eceSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = ece
+        fields = ['ECE_Id', 'Org_Name',]
+
+class parentSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = parent
+        fields = ['username', 'children','username','children',
+        'applications','getEmails','partner','clientNumber','title','firstName',
+        'lastName','firstNameNOTsame','lastNameNOTsame', 'nameOtherKnown',
+        'namePrefer', 'dob', 'gender', 'irdNumber', 'ethnicity',
+                  ]
+
+
+class childrenSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = children
+        fields = ['child_FullName', 'child_Parent','child_DOB',
+                  'Child_ECE_Provider','Child_ECE_WeekTotal','Child_ECE_StartDate']
 
 class ccsSerializer(serializers.ModelSerializer):
     # number = BookNumberSerializer(many=False)
